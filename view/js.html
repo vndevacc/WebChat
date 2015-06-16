@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<script>
+
+    var Point = (function () {
+        function P(params) {
+
+            params = params || {};
+            this.x = params.x;
+            this.y = params.y;
+        }
+
+        var _instance;
+
+        return {
+            getInstance: function (params) {
+                if (typeof _instance == "undefined") {
+                    _instance = new P(params);
+                }
+                return _instance;
+            }
+//            getPoint: function () {
+//                console.log("(" + _instance.x + "," + _instance.y + ")");
+//            }
+        }
+
+
+    })();
+
+</script>
+
+</body>
+</html>

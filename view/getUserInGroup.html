@@ -1,0 +1,5 @@
+{foreach $users as $user}
+<div id="{$user->id}" data-chat="" style="margin: 5px;">
+    <a href="javascript:void(0);">{$user->display_name|escape}</a>,
+</div>
+{/foreach}

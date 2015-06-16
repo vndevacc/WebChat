@@ -1,0 +1,59 @@
+<div>
+    <nav class="menu">
+        <ul>
+            <li>
+                <a href="chat.php">Chat &nbsp;>>&nbsp; </a>
+            </li>
+            <li>
+               Modify Account
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<div id="content">
+    <h2>Modify Account</h2>
+
+    <form action="modifyAccount.php" method="post" enctype="multipart/form-data">
+        <div class="error">{$error}</div>
+        <div class="info">{$info}</div>
+        <div>
+            <label>Username<span class="required"></span></label>
+            {$username}
+        </div>
+        <div>
+            <label>Display Name<span class="required">*</span></label>
+            <input type="text" maxlength="50" name="display_name" id="display_name" value="{$display_name}"/>
+        </div>
+        <div>
+            <label>Email</label>
+            <input type="text" maxlength="50" name="email" id="email" value="{$email}"/>
+        </div>
+        <div>
+            <label>Avatar </label>
+            <img src="{$avatar}" id="avatar" style="width: 64px;height: 64px;"/>
+            <input type="file" name="avatar" id="avatar"/>
+        </div>
+
+        <div>
+            <label></label>
+            <input type="submit" name="modify_account" id="modify_account" value="Change"/>
+            <input type="button"  value="Cancel" onclick="window.location='chat.php'"/>
+        </div>
+    </form>
+    <div class="clear"></div>
+    <div>
+        <nav class="menu">
+            <ul>
+                <li>
+                    <a href="chat.php">Back to chat &nbsp;&nbsp; </a>
+                </li>
+                <li>
+
+            </ul>
+        </nav>
+    </div>
+    <div style="clear: both;"></div>
+</div>
+
+

@@ -1,0 +1,250 @@
+body { 
+margin: 0;
+padding: 0; 
+background: #f5f5f5;
+color: #333;
+line-height: 24px;
+font-size: 16px;
+font-family: Georgia, Verdana, sans-serif;
+}
+
+a { color: #000088; }
+a:hover { color: #880000; }
+
+#wrap { 
+margin: 0 auto;
+width: 100%;
+max-width: 1000px;
+}
+
+#header {
+height: 200px;
+}
+#header h1 {
+padding: 35px 0 0 0;
+margin: 0;
+font-weight: normal;
+color: #3e3e3e;
+font-size: 70px;
+line-height: 90px;
+}
+#header h2 {
+padding: 0; 
+margin: 0;
+font-weight: normal;
+color: #3f3f3f;
+font-size: 33px;
+}
+
+#menu {
+background: rgba(77, 97, 133, 0.64);
+height: 50px;
+line-height: 50px;
+color: #fff;
+font-size: 15px;
+}
+
+#menu ul {
+margin: 0;
+padding: 0 0 0 10px;
+list-style-type: none;
+}
+#menu ul li {
+display: inline; 
+padding: 0 10px;
+}
+#menu ul li a {
+text-decoration: none;
+color: #fff;
+}
+#menu ul li a:hover {
+color: #ffffbb;
+text-decoration: none;
+}
+
+#content { background: #fff; padding: 10px 20px;}
+#content h2 { padding-top: 10px; font-weight: normal; font-size: 30px; color: #383838; }
+#content h3 { font-weight: normal; font-size: 21px; background: #fff88e; padding: 10px; color: red; }
+
+#footer { 
+background: #353535;
+color: #fff;
+padding: 5px 5px;
+text-align: center;
+}
+#footer a { color: #fff; text-decoration: none; }
+#footer a:hover { color: #fff88e; }
+
+.left { float: left; }
+.right { float: right; }
+.clear { clear: both; }
+
+form label{
+    width: 17%;
+    font-weight: bold;
+    padding-right: 10px;
+    text-align: right;
+    display: inline-block;
+    margin: 2px;
+}
+
+#wrap h2{
+    font-weight: bold;
+    width: 40%;
+    text-align: center;
+}
+
+form input[type="submit"] {
+    padding: 5px 10px 5px 10px;
+    margin: 2px;
+}
+
+form input[type="button"] {
+    padding: 5px 10px 5px 10px;
+    margin: 2px;
+}
+
+label .required{
+    font-size: .9em;
+    color: red;
+    font-style: italic;
+}
+.error{
+    color: red;
+    font-size: .9em;
+    text-align: center;
+    width: 42%;
+    margin: 5px;
+    font-style: italic;
+}
+.info{
+    color: green;
+    font-size: .9em;
+    text-align: center;
+    width: 42%;
+    margin: 5px;
+    font-style: italic;
+}
+
+
+.menu li:hover > a, .menu .current-item > a {
+    text-decoration:none;
+    color:#be5b70;
+}
+
+.menu .arrow {
+    /*font-size:11px;*/
+    line-height:0%;
+}
+
+/*----- Top Level -----*/
+.menu > ul > li {
+    float:left;
+    display:inline-block;
+    position:relative;
+
+
+    /*font-size:19px;*/
+}
+
+.menu > ul > li > a {
+    /*padding:10px 40px;*/
+    display:inline-block;
+    text-shadow:0px 1px 0px rgba(0,0,0,0.4);
+    text-decoration: none;
+}
+
+.menu > ul > li:hover > a, .menu > ul > .current-item > a {
+    /*background:#2e2728;*/
+}
+
+/*----- Bottom Level -----*/
+.menu li:hover .sub-menu {
+    z-index:1;
+    opacity:1;
+    font-size: 13px;
+    line-height: 13px;
+    max-width: 250px;
+    min-width: 150px;
+}
+
+.sub-menu {
+    /*width:300%;*/
+    height:200%;
+    /*padding:5px 0px;*/
+    position:absolute;
+    top:100%;
+    right:0px;
+    z-index:-1;
+    opacity:0;
+    transition:opacity linear 0.15s;
+    box-shadow:0px 2px 3px rgba(0,0,0,0.2);
+    background: rgba(83, 95, 118, 0.64);
+}
+
+.sub-menu li {
+    display:block;
+    /*font-size:16px;*/
+}
+
+.sub-menu li a {
+    /*padding:10px 30px;*/
+    display:block;
+    text-align: right;
+    margin-right: 20px;
+}
+
+.sub-menu li a:hover, .sub-menu .current-item a {
+    /*background:#3e3436;*/
+}
+
+/*chat*/
+table, th, td {
+    border: 1px solid #d3d3d3;
+    color: #555555;
+
+}
+
+#list_chat ul li a .img_div {
+    float: left;
+    width: 17%;
+}
+
+#list_chat ul li {
+
+    padding: 2px;
+}
+
+#list_chat ul li a .name_div {
+    float: left;
+    text-align: center;
+    margin-top: 2px;
+}
+
+#list_chat ul li a img {
+    width: 32px;
+    height: 32px;
+}
+
+#list_chat ul li a .notify {
+    float: left;
+    margin-left: 4px;
+    margin-bottom: 5px;
+    color: darkred;
+    font-size: .8em;
+}
+
+#list_chat ul li a {
+    text-decoration: none;
+}
+
+#list_chat ul li:hover {
+    /*background: #d2e8ff;*/
+    /*background:red;*/
+}
+
+.active {
+    background: #d2e8ff;
+}
+
+/*chat*/

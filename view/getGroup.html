@@ -1,0 +1,12 @@
+{foreach $groups as $group}
+<li id="{$group->id}" data-chat="" title="{$group->members_name}">
+    <a href="javascript:void(0);">
+        <div class="img_div"><img src="{$group->avatar}" style="width: 32px;height: 32px;"></div>
+        <div class="name_div">{$group->group_name|escape|truncate:20}</div>
+        <div style="clear: both;"></div>
+    </a>
+    <script type="text/javascript">
+        webChat.chat.pushGroupId({$group->id});
+    </script>
+</li>
+{/foreach}

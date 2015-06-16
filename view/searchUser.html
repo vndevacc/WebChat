@@ -1,0 +1,77 @@
+{literal}
+<script type="text/javascript">
+
+    webChat.inviteUser = (function () {
+        var __checkedUserId = {};
+        var _check = function (element, id) {
+            var $this = $(element);
+            if ($this.is(':checked')) {
+                __checkedUserId[id] = 1;
+            } else {
+                __checkedUserId[id] = 0;
+            }
+        }
+
+        var _invite = function () {
+            for (var key in __checkedUserId) {
+                if (__checkedUserId.hasOwnProperty(key) && __checkedUserId[key]) {
+                    _createGroup(key);
+                }
+            }
+            __checkedUserId = {};
+        }
+
+        var _getCheckedUserId = function () {
+            return __checkedUserId;
+        }
+
+        var _clearData = function () {
+            __checkedUserId = {};
+        }
+
+        var _createGroup = function (userId) {
+            $.ajax({
+                method: "POST",
+                url: "createGroup.php?v=" + new Date().getTime(),
+                async: false,
+                data: {"user_id": userId},
+                success: function (data) {
+                    data = JSON.parse(data);
+                    if (!webChat.common.checkSession(data)) {
+                        return;
+                    }
+                    if (typeof data != "undefined" && data.error >= 0) {
+
+                    } else {
+                        webChat.chat.alertMessage(data.message);
+                    }
+                }
+            });
+        }
+
+
+        return {
+            check: _check,
+            getCheckedUserId: _getCheckedUserId,
+            invite: _invite,
+            clearData: _clearData,
+            createGroup: _createGroup
+        };
+
+
+    })();
+</script>
+{/literal}
+
+{foreach $users as $user}
+<div id="{$user->id}" data-chat="" style="margin: 5px;">
+    <a href="javascript:void(0);">
+        <div style="float: left"><img src="{$user->avatar}" style="width: 32px;height: 32px;"></div>
+        <div style="float: left; margin-left: 20px">{$user->display_name|escape}</div>
+        <input type="checkbox" onchange="webChat.inviteUser.check(this,{$user->id})">
+
+        <div style="clear: both;"></div>
+    </a>
+</div>
+{/foreach}
+

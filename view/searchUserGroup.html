@@ -1,0 +1,8 @@
+<select id="select_user_result" style="width:300px;height: 70%;" multiple="" size="5" name="">
+    {foreach $users as $user}
+    <option value="{$user->id}">{$user->display_name|escape}</option>
+    <script type="text/javascript">
+        webChat.inviteGroup.pushResult({$user->id});
+    </script>
+    {/foreach}
+</select>

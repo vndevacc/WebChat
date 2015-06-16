@@ -1,0 +1,36 @@
+<div id="content">
+    <h2>Sign Up</h2>
+    <form action="signup.php"  method="post" enctype="multipart/form-data">
+        <div class="error">{$error}</div>
+        <div>
+            <label>Username<span class="required">*</span></label>
+            <input type="text" maxlength="100" name="username" id="username" value="{$username}"/>
+        </div>
+        <div>
+            <label>Password</label>
+            <input type="password" maxlength="100" name="password" id="password"/>
+        </div>
+        <div>
+            <label>Confirm Password</label>
+            <input type="password" maxlength="20" name="confirm_password" id="confirm_password"/>
+        </div>
+        <div>
+            <label>Display Name<span class="required">*</span></label>
+            <input type="text" maxlength="100" name="display_name" id="display_name" value="{$display_name}"/>
+        </div>
+        <div>
+            <label>Email</label>
+            <input type="text" maxlength="100" name="email" id="email" value="{$email}"/>
+        </div>
+        <div>
+            <label>Avatar</label>
+            <input type="file"  name="avatar" id="avatar"/>
+        </div>
+
+        <div>
+            <label></label>
+            <input type="submit"  name="sign_up"  id="sign_up" value="Sign Up"/>
+        </div>
+    </form>
+    <div class="clear"></div>
+</div>
